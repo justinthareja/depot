@@ -24,7 +24,7 @@ panic. Tackle just about any API challenge with more than a dozen
 open-source utilities and common programming patterns you can apply
 right away.
 </p>},
-image_url: 'maapis.jpg',
+image_url: 'https://thumb.ac-illust.com/58/583f6040cb8f4e15f112cf81e978c828_t.jpeg',
 price: 24.95)
 
 Product.create!(title: 'Ruby Programming for Beginners',
@@ -33,7 +33,7 @@ description:
 <em>Learn Ruby from Scratch</em>
 Are you new to programming? Start your journey with Ruby, a beginner-friendly and elegant programming language. This book will guide you through the basics of Ruby programming, from variables and data types to control flow and object-oriented programming. With clear explanations and hands-on exercises, you'll gain the skills to write your own Ruby programs and build a solid foundation for further learning.
 </p>},
-image_url: 'ruby_book.jpg',
+image_url: 'https://thumb.ac-illust.com/58/583f6040cb8f4e15f112cf81e978c828_t.jpeg',
 price: 19.99)
 
 Product.create!(title: 'Mastering Ruby on Rails',
@@ -42,6 +42,6 @@ description:
 <em>Become a Rails Expert</em>
 Take your Ruby skills to the next level with Ruby on Rails, a powerful web application framework. In this book, you'll learn how to build full-featured web applications using Rails' conventions and best practices. From creating models and controllers to handling authentication and deploying your app, you'll master the key concepts and techniques of Rails development. Whether you're a beginner or an experienced Rubyist, this book will help you become a Rails expert.
 </p>},
-image_url: 'rails_book.jpg',
+image_url: 'https://thumb.ac-illust.com/58/583f6040cb8f4e15f112cf81e978c828_t.jpeg',
 price: 29.99)
 # . . .

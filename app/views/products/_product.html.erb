@@ -3,20 +3,18 @@
     <strong class="block font-medium mb-1">Title:</strong>
     <%= product.title %>
   </p>
-
   <p class="my-5">
     <strong class="block font-medium mb-1">Description:</strong>
     <%= product.description %>
   </p>
-
   <p class="my-5">
-    <strong class="block font-medium mb-1">Image url:</strong>
-    <%= product.image_url %>
+    <strong class="block font-medium mb-1">Image:</strong>
+    <%= image_tag product.image_url, class: "w-40" %>
   </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Price:</strong>
-    <%= product.price %>
-  </p>
-
+</p>
+</p>
+<p class="my-5">
+  <strong class="block font-medium mb-1">Price:</strong>
+  <%= product.price %>
+</p>
 </div>

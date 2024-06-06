@@ -58,6 +58,6 @@ class ProductTest < ActiveSupport::TestCase
     # JT: products(:ruby) is how to access fixture within a test
     product = Product.new(title: products(:ruby).title, description: 'yyy', price: 1, image_url: 'fred.gif')
     assert product.invalid?
-    assert_equal [I18n.translate('errors.messages.taken')], product.errors[:title]
+    assert_equal ['must be unique'], product.errors[:title]
   end
 end

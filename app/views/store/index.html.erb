@@ -17,14 +17,15 @@ class: 'object-contain w-40 h-48 shadow mr-6') %>
           <h2 class="font-bold text-lg mb-3"><%= product.title %></h2>
           <p>
             <%# JT: This allows us to safely
-            add HTML stylings to make the descriptions more interesting for our customers.; %>
-            <%= sanitize(product.description) %>
-          </p>
-          <div class="mt-3">
-            <%= product.price %>
+            add HTML stylings to make the descriptions more interesting
+            for our customers.; %>
+              <%= sanitize(product.description) %>
+            </p>
+            <div class="mt-3">
+              <%= product.price %>
+            </div>
           </div>
-        </div>
-      </li>
-    <% end %>
-  </ul>
-</div>
+        </li>
+      <% end %>
+    </ul>
+  </div>

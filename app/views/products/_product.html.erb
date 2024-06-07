@@ -5,7 +5,7 @@
   </p>
   <p class="my-5">
     <strong class="block font-medium mb-1">Description:</strong>
-    <%= product.description %>
+    <%= sanitize product.description %>
   </p>
   <p class="my-5">
     <strong class="block font-medium mb-1">Image:</strong>
@@ -15,6 +15,6 @@
 </p>
 <p class="my-5">
   <strong class="block font-medium mb-1">Price:</strong>
-  <%= product.price %>
+  <%= number_to_currency product.price %>
 </p>
 </div>

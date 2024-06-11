@@ -43,6 +43,19 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to product_url(@product)
   end
 
+  test 'can not delete product in cart' do
+    # JT: this is what the book had for the test but it throws an error
+    # would it make more sense to check for an error message instead? something like:
+
+    # assert_raises(ActiveRecord::RecordNotDestroyed) do
+    #   delete product_url(products(:two))
+    # end
+    assert_difference('Product.count', 0) do
+      delete product_url(products(:two))
+    end
+    assert_redirected_to products_url
+  end
+
   test 'should destroy product' do
     assert_difference('Product.count', -1) do
       delete product_url(@product)

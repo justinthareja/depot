@@ -1,0 +1,11 @@
+<div id="<%= dom_id cart %>">
+  <h2 class="font-bold text-lg mb-3">Your Cart</h2>
+  <ul class="list-disc list-inside">
+    <%# JT: why don't you need the '@' symbol here?? %>
+    <% cart.line_items.each do |li| %>
+      <li>
+        <%= li.product.title%>
+      </li>
+    <% end %>
+  </ul>
+</div>

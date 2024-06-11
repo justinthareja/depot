@@ -19,12 +19,14 @@
               <h2 class="font-bold text-lg mb-3"><%= product.title %></h2>
               <p>
                 <%# JT: This allows us to safely
-            add HTML stylings to make the descriptions more interesting
-            for our customers.; %>
+                  add HTML stylings to make the descriptions more interesting
+                  for our customers. %>
                   <%= sanitize(product.description) %>
                 </p>
                 <div class="mt-3">
                   <%= number_to_currency product.price %>
+                  <%# JT: button_to wraps a button in a from element to POST /line_items?product_id=36 %>
+                  <%= button_to 'Add to Cart', line_items_path(product_id: product), form_class: 'inline', class: 'ml-4 rounded-lg py-1 px-2 text-white bg-green-600' %>
                 </div>
               </div>
             </li>

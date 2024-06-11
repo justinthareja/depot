@@ -12,8 +12,4 @@ module CurrentCart
     @cart = Cart.create
     session[:cart_id] = @cart.id
   end
-
-  def add_to_cart(product)
-    @cart.line_items.build(product:)
-  end
 end

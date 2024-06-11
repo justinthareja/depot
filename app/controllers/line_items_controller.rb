@@ -27,7 +27,7 @@ class LineItemsController < ApplicationController
   def create
     # JT: the params object is a hash of all the query parameters passed to the controller
     product = Product.find(params[:product_id])
-    @line_item = add_to_cart(product)
+    @line_item = @cart.add_product(product)
 
     respond_to do |format|
       if @line_item.save

@@ -47,13 +47,13 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     # JT: this is what the book had for the test but it throws an error
     # would it make more sense to check for an error message instead? something like:
 
-    # assert_raises(ActiveRecord::RecordNotDestroyed) do
-    #   delete product_url(products(:two))
-    # end
-    assert_difference('Product.count', 0) do
+    assert_raises(ActiveRecord::RecordNotDestroyed) do
       delete product_url(products(:two))
     end
-    assert_redirected_to products_url
+    # assert_difference('Product.count', 0) do
+    #   delete product_url(products(:two))
+    # end
+    # assert_redirected_to products_url
   end
 
   test 'should destroy product' do

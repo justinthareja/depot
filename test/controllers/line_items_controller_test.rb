@@ -25,6 +25,14 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
     assert_select 'li', "1 \u00D7 Programming Ruby 1.9"
   end
 
+  test 'should update quantity' do
+    product = products(:ruby)
+    post line_items_url, params: { product_id: product.id }
+    assert_difference('LineItem.last.quantity', 1) do
+      post line_items_url, params: { product_id: product.id }
+    end
+  end
+
   test 'should show line_item' do
     get line_item_url(@line_item)
     assert_response :success

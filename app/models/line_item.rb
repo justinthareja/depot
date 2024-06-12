@@ -3,4 +3,8 @@ class LineItem < ApplicationRecord
   # these declarations add navigational capacity to the model objects
   belongs_to :product
   belongs_to :cart
+
+  def total_price
+    product.price * quantity
+  end
 end

@@ -7,7 +7,9 @@ partial we expect to have a variable called line_item. %>
   <% else %>
     <tr>
     <% end %>
-    <td class="text-right"><%= line_item.quantity %></td>
+    <td class="text-right flex flex-col">
+      <%= line_item.quantity %>
+    </td>
     <td>&times;</td>
     <td class="pr-2">
       <%= line_item.product.title %>
